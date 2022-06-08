@@ -14,8 +14,8 @@ Using these methods, we will be able to classify and predict and recommend poten
 ## Results
 ### RandomOverSampler
 Balanced accuracy score is 65%.
-The high_risk precision is about 1% only with 62% sensitivity which makes a F1 of 2% only.
-Due to the high number of the low_risk population, its precision is almost 100% with a sensitivity of 68%
+Sensitivity is about 62% while precision in high_risk is about 1%. This makes a F1 of 2% only.
+Precision is almost 100% due to the large number of the low_risk population, with a sensitivity of 68%.
 
 ![1 3](https://user-images.githubusercontent.com/98041751/172724989-f3f96fd9-26a2-491d-a89f-2e6114c8ac8f.png)
 
@@ -25,10 +25,10 @@ Due to the high number of the low_risk population, its precision is almost 100% 
 
 
 ### SMOTE model
-The results are pretty similar to the previous model.
+This model resembles the previous model. 
 The balanced accuracy score is 64%.
-The high_risk precision is about 1% only with 63% sensitivity which makes a F1 of 2% only.
-Due to the high number of the low_risk population, its precision is almost 100% with a sensitivity of 66%.
+Sensitivity is only 63% with a high_risk precision of about 1%. This makes F1 of 2% only.
+Precision is almost 100% due to the large number of the low_risk population, with a sensitivity of 66%.
 
 ![2 2](https://user-images.githubusercontent.com/98041751/172725110-cf226e29-2014-4fde-8a1b-a7107ecb86d9.png)
 
@@ -37,9 +37,9 @@ Due to the high number of the low_risk population, its precision is almost 100% 
 ![2 4](https://user-images.githubusercontent.com/98041751/172725143-d19c00eb-c059-49e8-9701-601ee19e316b.png)
 
 ### ClusterCentroids model
-Here the balanced accuracy score is down to about 52%.
-The high_risk precision is still 1% only with 63% sensitivity which makes a F1 of 1%.
-Due to the high number of false positives, the low_risk sensitivity is only 40%.
+Balance accuracy is about 52%.
+Senesitivity only is 63% with a high_risk precision is still 1%. This makes F1 of 1%.
+Low_risk is only 40% due to the high number of false positives.
 
 ![3 1](https://user-images.githubusercontent.com/98041751/172725254-46bea055-db3c-4925-b42d-ae2bbcf2a14b.png)
 
@@ -51,7 +51,7 @@ Due to the high number of false positives, the low_risk sensitivity is only 40%.
 
 ### SMOTEENN model
 The balanced accuracy score is about 62%.
-The high_risk precision is still 1% only with 68% sensitivity which makes a F1 of only 2%.
+Sensitivity is only 68% with a high_risk precision at 1%. This makes F1 of only 2%.
 Due to the high number of false positives, the low_risk sensitivity is 57%.
 
 ![4 1](https://user-images.githubusercontent.com/98041751/172725386-840b321e-49b6-441c-8022-a803c3ddeecc.png)
@@ -63,8 +63,8 @@ Due to the high number of false positives, the low_risk sensitivity is 57%.
 
 ### BalancedRandomForestClassifier 
 The balanced accuracy score improved to about 79%.
-The high_risk precision is still low at 4% only with 67% sensitivity which makes a F1 of only 7%.
-Due to a lower number of false positives, the low_risk sensitivity is now 91% with 100% presicion.
+Sensitivity is only 67% with a high_risk precision at a low 4%, making the F1 of only 7%.
+The low_risk sensitivity is at 91% due to a lower number of false positives, with 100% presicion.
 
 ![5 1](https://user-images.githubusercontent.com/98041751/172725635-2482d2ed-1770-458d-a724-7b759d4c6966.png)
 
@@ -75,9 +75,9 @@ Due to a lower number of false positives, the low_risk sensitivity is now 91% wi
 
 
 ### EasyEnsembleClassifier
-Now, the balanced accuracy score is high to about 93%.
-The high_risk precision is still low at 7% only with 91% sensitivity which makes a F1 of only 14%.
-Due to a lower number of false positives, the low_risk sensitivity is now 94% with 100% presicion.
+The balanced accuracy score is high at around 93%.
+WIth only 91% sensitivity and with the high_risk precision is still low at 7%. makes a F1 of only 14%.
+With low_risk sensitivity at 94% due to a lower number of false positives, with 100% presicion.
 
 ![1 1](https://user-images.githubusercontent.com/98041751/172725768-c49876b2-a026-40d8-bc32-74b3903f843c.png)
 
@@ -88,10 +88,6 @@ Due to a lower number of false positives, the low_risk sensitivity is now 94% wi
 
 
 ## Summary
-
-All the models used to perform the credit risk analysis show weak precision in determining if a credit risk is high.
-The Ensemble models brought a lot more improvment specially on the sensitivity of the high risk credits.
-The EasyEnsembleClassifier model shows a recall of 92% so it detects almost all high risk credit. On another hand, with a low precision, a lot of low risk credits are still falsely detected as high risk which would penalize the bank's credit strategy and infer on its revenue by missing those business opportunities.
-For those reasons I would not recommend the bank to use any of these models to predict credit risk.
-
-
+The risk is high since all models used show weak precision. 
+However, high improvement on the sensitivity of high risk credits can be seen through the Ensemble model. 
+With a recall of 92%, EasyEnsembleClassifier model detects all high risk credi while, with a low precision, the bank's credit strategy is penatalized because this method detects low_risk credit falsely as high_risk, which can mendle with its profit. For this reason, the bank should not use any of these models to predict credit risk. 
